@@ -6,7 +6,7 @@
 #    By: igomes-h <italogholanda@gmail.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/07 20:31:23 by igomes-h          #+#    #+#              #
-#    Updated: 2022/04/07 20:31:25 by igomes-h         ###   ########.fr        #
+#    Updated: 2022/04/08 23:48:33 by igomes-h         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,5 +47,5 @@ re: fclean all
 
 run: re
 	clear
-	./server
+	./$(NAME)
 
