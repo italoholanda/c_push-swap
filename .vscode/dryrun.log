@@ -1,5 +1,6 @@
 make --dry-run --keep-going --print-directory
 make: Entering directory '/home/italo/42/push-swap'
-make: Nothing to be done for 'all'.
+make -C ./libft
+gcc push_swap.c ps_stack.c stack_utils.c -o push_swap -Wall -Werror -Wextra ./libft/ftprintf.a ./libft/libft.a -fsanitize=address
 make: Leaving directory '/home/italo/42/push-swap'
  

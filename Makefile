@@ -6,7 +6,7 @@
 #    By: igomes-h <italogholanda@gmail.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/07 20:31:23 by igomes-h          #+#    #+#              #
-#    Updated: 2022/04/08 23:48:33 by igomes-h         ###   ########.fr        #
+#    Updated: 2022/04/09 11:22:19 by igomes-h         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ PRINTF:= ./libft/ftprintf.a
 INCLUDE:= $(PRINTF) $(LIBFT)
 
 ## SOURCE ##
-SRC:= push_swap.c
+SRC:= push_swap.c ps_stack.c stack_utils.c
 
 ## BIN ##
 # BIN:= push_swap.o
