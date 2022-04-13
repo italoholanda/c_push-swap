@@ -1,6 +1,8 @@
 ## SRC ##
 SRC_MISC = \
 	source/misc/ft_atoi.c 		\
+	source/misc/ft_atod.c 		\
+	source/misc/ft_atol.c 		\
 	source/misc/ft_bzero.c 		\
 	source/misc/ft_calloc.c 	\
 	source/misc/ft_isalnum.c 	\

@@ -6,7 +6,7 @@
 /*   By: igomes-h <italogholanda@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/19 11:00:16 by igomes-h          #+#    #+#             */
-/*   Updated: 2021/09/14 11:56:29 by igomes-h         ###   ########.fr       */
+/*   Updated: 2022/04/13 20:43:54 by igomes-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,8 @@ int		ft_atoi(const char *str);
 * *ft_strdup(const char *s), is a function that will duplicate a string and
 * return a pointer to the new string.
 */
+double	ft_atod(const char *str);
+long	ft_atol(const char *s);
 char	*ft_strdup(const char *s);
 /*
 * *ft_strchr(const char *s, int c), is a function that will find the first

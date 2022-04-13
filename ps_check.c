@@ -6,7 +6,7 @@
 /*   By: igomes-h <italogholanda@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/12 19:06:03 by igomes-h          #+#    #+#             */
-/*   Updated: 2022/04/13 20:28:18 by igomes-h         ###   ########.fr       */
+/*   Updated: 2022/04/13 20:51:49 by igomes-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
 
 int	is_int(char **argv, int argc)
 {
-	long	i;
+	int		i;
 	int		j;
-	int		n;
+	long	n;
 
 	i = 1;
 	while (i < argc)
@@ -30,9 +30,8 @@ int	is_int(char **argv, int argc)
 				return (0);
 			j++;
 		}
-		n = ft_atoi(argv[i]);
-		ft_printf("%d", 2147483648);
-		if ((int)INT_MIN > n || (int)INT_MAX < n)
+		n = ft_atol(argv[i]);
+		if (n > INT_MAX || n < INT_MIN)
 			return (0);
 		i++;
 	}
