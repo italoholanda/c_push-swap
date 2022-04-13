@@ -6,7 +6,7 @@
 #    By: igomes-h <italogholanda@gmail.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/07 20:31:23 by igomes-h          #+#    #+#              #
-#    Updated: 2022/04/09 11:22:19 by igomes-h         ###   ########.fr        #
+#    Updated: 2022/04/12 20:34:58 by igomes-h         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ PRINTF:= ./libft/ftprintf.a
 INCLUDE:= $(PRINTF) $(LIBFT)
 
 ## SOURCE ##
-SRC:= push_swap.c ps_stack.c stack_utils.c
+SRC:= push_swap.c ps_stack.c ps_check.c
 
 ## BIN ##
 # BIN:= push_swap.o
@@ -47,5 +47,5 @@ re: fclean all
 
 run: re
 	clear
-	./$(NAME)
+	./$(NAME) 4 -1 2
 

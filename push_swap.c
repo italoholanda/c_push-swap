@@ -6,17 +6,23 @@
 /*   By: igomes-h <italogholanda@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 23:22:48 by igomes-h          #+#    #+#             */
-/*   Updated: 2022/04/09 12:59:42 by igomes-h         ###   ########.fr       */
+/*   Updated: 2022/04/12 21:48:56 by igomes-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int main(void)
+int	main(int argc, char **argv)
 {
-	t_stack *stack_a;
+	t_stack	*stack_a;
+	t_stack	*stack_b;
 
-	stack_a = make_stack();
-	free_stack(stack_a);
+	stack_a = ps_malloc();
+	stack_b = ps_malloc();
+	mk_stacks(stack_a, stack_b, argc);
+	check_args(argc, argv, stack_a, stack_b);
 	ft_printf("ok");
+	free_stacks(stack_a, stack_b);
+	if (argv)
+		return (1);
 }

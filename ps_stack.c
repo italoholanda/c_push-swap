@@ -5,41 +5,52 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: igomes-h <italogholanda@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/09 11:24:36 by igomes-h          #+#    #+#             */
-/*   Updated: 2022/04/09 12:59:12 by igomes-h         ###   ########.fr       */
+/*   Created: 2022/04/12 18:42:44 by igomes-h          #+#    #+#             */
+/*   Updated: 2022/04/12 20:29:56 by igomes-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_stack *make_stack()
+t_stack *ps_malloc(void)
 {
 	t_stack *stack;
 
 	stack = malloc(sizeof(t_stack));
-	stack->value = 0;
-	stack->index = 0;
-	stack->next = stack;
-	stack->previous = stack;
-	stack->map = malloc(sizeof(t_map));
-	stack->map->length = 1;
-	stack->map->head = stack;
-	stack->map->endian = stack;
+	if (!stack)
+		exit(1);
 	return (stack);
 }
 
-int	clear_stack(t_stack stack)
+int mk_stacks(t_stack *stack_a, t_stack *stack_b, int argc)
 {
-	int i;
-	t_stack tmp_node;
-
-	i = 0;
-	while (i <= stack->map->length)
+	stack_a->length = argc - 1;
+	stack_a->list = malloc(sizeof(int) * argc);
+	if (!stack_a->list)
+		exit(1);
+	stack_a->index = malloc(sizeof(int) * argc);
+	if (!stack_a->index)
 	{
-		ft_printf("apagando.");
-		tmp_node = stack;
-		stack = stack->next;
-		free(tmp_node);
+		free(stack_a->list);
+		exit(1);
 	}
-	free(stack);
+	stack_b->length = 0;
+	stack_b->index = malloc(sizeof(int) * argc);
+	if (!stack_b->index)
+	{
+		free(stack_a->list);
+		free(stack_a->index);
+		exit(1);
+	}
+	ft_bzero(stack_b->index, stack_a->length);
+	return (0);
+}
+
+void free_stacks(t_stack *stack_a, t_stack *stack_b)
+{
+	free(stack_a->list);
+	free(stack_a->index);
+	free(stack_b->index);
+  free(stack_a);
+  free(stack_b);
 }
