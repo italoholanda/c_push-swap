@@ -6,7 +6,7 @@
 /*   By: igomes-h <italogholanda@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/12 19:06:03 by igomes-h          #+#    #+#             */
-/*   Updated: 2022/04/13 20:51:49 by igomes-h         ###   ########.fr       */
+/*   Updated: 2022/04/13 21:24:01 by igomes-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,11 +49,10 @@ int	is_repeated(char **argv, int argc)
 	{
 		tmp = ft_atoi(argv[i]);
 		j = i + 1;
-		while (j < argc - 1)
+		while (j < argc)
 		{
-			if (tmp == ft_atoi(argv[j]))
+			if (tmp == ft_atoi(argv[j++]))
 				return (1);
-			j++;
 		}
 		i++;
 	}
@@ -64,10 +63,10 @@ int	is_sorted(char **argv, int argc)
 {
 	int	i;
 
-	i = 1;
-	while (i++ < argc - 2)
+	i = 0;
+	while (++i < argc - 1)
 	{
-		if (argv[i] > argv[i + 1])
+		if (ft_atoi(argv[i]) > ft_atoi(argv[i + 1]))
 			return (0);
 	}
 	return (1);
@@ -88,5 +87,8 @@ void	check_args(int argc, char **argv, t_stack *s_a, t_stack *s_b)
 		exit(1);
 	}
 	if (is_sorted(argv, argc))
+	{
+		ft_putstr_fd("Error: is sorted\n", 1);
 		exit(1);
+	}
 }
