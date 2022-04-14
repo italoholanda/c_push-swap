@@ -6,15 +6,15 @@
 /*   By: igomes-h <italogholanda@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/12 18:42:44 by igomes-h          #+#    #+#             */
-/*   Updated: 2022/04/12 20:29:56 by igomes-h         ###   ########.fr       */
+/*   Updated: 2022/04/13 22:14:07 by igomes-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_stack *ps_malloc(void)
+t_stack	*stack_malloc(void)
 {
-	t_stack *stack;
+	t_stack	*stack;
 
 	stack = malloc(sizeof(t_stack));
 	if (!stack)
@@ -22,7 +22,7 @@ t_stack *ps_malloc(void)
 	return (stack);
 }
 
-int mk_stacks(t_stack *stack_a, t_stack *stack_b, int argc)
+int	make_stacks(t_stack *stack_a, t_stack *stack_b, int argc)
 {
 	stack_a->length = argc - 1;
 	stack_a->list = malloc(sizeof(int) * argc);
@@ -46,11 +46,11 @@ int mk_stacks(t_stack *stack_a, t_stack *stack_b, int argc)
 	return (0);
 }
 
-void free_stacks(t_stack *stack_a, t_stack *stack_b)
+void	free_stacks(t_stack *stack_a, t_stack *stack_b)
 {
 	free(stack_a->list);
 	free(stack_a->index);
 	free(stack_b->index);
-  free(stack_a);
-  free(stack_b);
+	free(stack_a);
+	free(stack_b);
 }

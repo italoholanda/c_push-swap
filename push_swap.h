@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: igomes-h <italogholanda@gmail.com>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/04/13 22:03:56 by igomes-h          #+#    #+#             */
+/*   Updated: 2022/04/13 22:14:14 by igomes-h         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
@@ -13,9 +24,9 @@ typedef struct s_stack
 	int	largest;
 }		t_stack;
 
-t_stack	*ps_malloc(void);
-int		mk_stacks(t_stack *stack_a, t_stack *stack_b, int argc);
+t_stack	*stack_malloc(void);
+int		make_stacks(t_stack *stack_a, t_stack *stack_b, int argc);
 void	free_stacks(t_stack *stack_a, t_stack *stack_b);
-void	check_args(int argc, char **argv, t_stack *s_a, t_stack *s_b);
+int		are_the_args_valid(int argc, char **argv);
 
 #endif

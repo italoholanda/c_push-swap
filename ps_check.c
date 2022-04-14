@@ -6,7 +6,7 @@
 /*   By: igomes-h <italogholanda@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/12 19:06:03 by igomes-h          #+#    #+#             */
-/*   Updated: 2022/04/13 21:24:01 by igomes-h         ###   ########.fr       */
+/*   Updated: 2022/04/13 22:08:58 by igomes-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,23 +72,19 @@ int	is_sorted(char **argv, int argc)
 	return (1);
 }
 
-void	check_args(int argc, char **argv, t_stack *s_a, t_stack *s_b)
+int	are_the_args_valid(int argc, char **argv)
 {
 	if (!is_int(argv, argc))
 	{
 		ft_putstr_fd("Error: needs to be int\n", 1);
-		free_stacks(s_a, s_b);
-		exit(1);
+		return (0);
 	}
 	if (is_repeated(argv, argc))
 	{
 		ft_putstr_fd("Error: can't be repeated\n", 1);
-		free_stacks(s_a, s_b);
-		exit(1);
+		return (0);
 	}
 	if (is_sorted(argv, argc))
-	{
-		ft_putstr_fd("Error: is sorted\n", 1);
-		exit(1);
-	}
+		return (0);
+	return (1);
 }
