@@ -6,7 +6,7 @@
 /*   By: igomes-h <italogholanda@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/12 19:06:03 by igomes-h          #+#    #+#             */
-/*   Updated: 2022/04/13 22:08:58 by igomes-h         ###   ########.fr       */
+/*   Updated: 2022/04/13 22:47:06 by igomes-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,8 @@ int	is_sorted(char **argv, int argc)
 
 int	are_the_args_valid(int argc, char **argv)
 {
+	if (argc < 3)
+		return (0);
 	if (!is_int(argv, argc))
 	{
 		ft_putstr_fd("Error: needs to be int\n", 1);
