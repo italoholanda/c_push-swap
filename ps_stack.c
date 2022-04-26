@@ -6,7 +6,7 @@
 /*   By: igomes-h <italogholanda@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/12 18:42:44 by igomes-h          #+#    #+#             */
-/*   Updated: 2022/04/13 22:14:07 by igomes-h         ###   ########.fr       */
+/*   Updated: 2022/04/26 18:50:39 by igomes-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,4 +53,28 @@ void	free_stacks(t_stack *stack_a, t_stack *stack_b)
 	free(stack_b->index);
 	free(stack_a);
 	free(stack_b);
+}
+
+void	extend_stack(t_stack *stack)
+{
+	int	i;
+
+	i = 0;
+	while (stack->length + 1 > i)
+	{
+		stack->index[stack->length - i + 1] = stack->index[stack->length - i];
+		i++;
+	}
+}
+
+void	reduce_stack(t_stack *stack)
+{
+	int	i;
+
+	i = 0;
+	while (i < stack->length)
+	{
+		stack->index[i] = stack->index[i + 1];
+		i++;
+	}
 }

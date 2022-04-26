@@ -6,7 +6,7 @@
 /*   By: igomes-h <italogholanda@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/12 19:06:03 by igomes-h          #+#    #+#             */
-/*   Updated: 2022/04/13 22:47:06 by igomes-h         ###   ########.fr       */
+/*   Updated: 2022/04/26 19:22:27 by igomes-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,5 +88,19 @@ int	are_the_args_valid(int argc, char **argv)
 	}
 	if (is_sorted(argv, argc))
 		return (0);
+	return (1);
+}
+
+int	is_stack_sorted(t_stack *stack_a)
+{
+	int	i;
+
+	i = 0;
+	while (i < stack_a->length)
+	{
+		if (stack_a->index[i] > stack_a->index[i + 1])
+			return (0);
+		i++;
+	}
 	return (1);
 }

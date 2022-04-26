@@ -6,7 +6,7 @@
 #    By: igomes-h <italogholanda@gmail.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/07 20:31:23 by igomes-h          #+#    #+#              #
-#    Updated: 2022/04/12 20:34:58 by igomes-h         ###   ########.fr        #
+#    Updated: 2022/04/26 19:14:10 by igomes-h         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,10 +16,7 @@ PRINTF:= ./libft/ftprintf.a
 INCLUDE:= $(PRINTF) $(LIBFT)
 
 ## SOURCE ##
-SRC:= push_swap.c ps_stack.c ps_check.c
-
-## BIN ##
-# BIN:= push_swap.o
+SRC:= push_swap.c ps_stack.c ps_check.c ps_mov_part1.c ps_mov_part2.c ps_init_sort.c ps_small_sort.c ps_radix_sort.c
 
 ## NAME ##
 NAME:= push_swap

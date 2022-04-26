@@ -1,5 +1,0 @@
-make --dry-run --keep-going --print-directory
-make: Entering directory '/home/italo/42/push-swap'
-make: Nothing to be done for 'all'.
-make: Leaving directory '/home/italo/42/push-swap'
- 
