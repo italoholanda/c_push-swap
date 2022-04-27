@@ -6,7 +6,7 @@
 /*   By: igomes-h <italogholanda@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 19:09:42 by igomes-h          #+#    #+#             */
-/*   Updated: 2022/04/26 19:26:29 by igomes-h         ###   ########.fr       */
+/*   Updated: 2022/04/26 21:08:31 by igomes-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,15 +66,9 @@ void	five_sort(t_stack *stack_a, t_stack *stack_b)
 void	sort_small_stack(t_stack *stack_a, t_stack *stack_b)
 {
 	if (stack_a->length == 2)
-    {
 		s(stack_a, 'a');
-    }
-    if (stack_a->length == 3)
-    {
-        three_sort(stack_a);
-    }
-	if (stack_a->length < 6)
-    {
+	if (stack_a->length == 3)
+		three_sort(stack_a);
+	if (stack_a->length >= 4)
 		five_sort(stack_a, stack_b);
-    }
 }

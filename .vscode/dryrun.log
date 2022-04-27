@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/italo/42/push-swap'
+make -C ./libft
+gcc push_swap.c ps_stack.c ps_check.c ps_mov_part1.c ps_mov_part2.c ps_init_sort.c ps_small_sort.c ps_radix_sort.c -o push_swap -Wall -Werror -Wextra ./libft/ftprintf.a ./libft/libft.a -fsanitize=address
+make: Leaving directory '/home/italo/42/push-swap'
+ 
