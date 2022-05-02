@@ -6,7 +6,7 @@
 /*   By: igomes-h <italogholanda@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 20:12:44 by igomes-h          #+#    #+#             */
-/*   Updated: 2022/04/26 19:44:46 by igomes-h         ###   ########.fr       */
+/*   Updated: 2022/05/02 19:59:09 by igomes-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,5 @@ void	init_sort(t_stack *stack_a, t_stack *stack_b)
 	if (stack_a->length <= 5)
 		sort_small_stack(stack_a, stack_b);
 	else
-		ft_putstr_fd("RADIX SORT\n", 1);
+		radix_sort(stack_a, stack_b);
 }

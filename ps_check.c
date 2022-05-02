@@ -6,7 +6,7 @@
 /*   By: igomes-h <italogholanda@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/12 19:06:03 by igomes-h          #+#    #+#             */
-/*   Updated: 2022/04/26 19:22:27 by igomes-h         ###   ########.fr       */
+/*   Updated: 2022/05/02 19:54:29 by igomes-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,12 +78,12 @@ int	are_the_args_valid(int argc, char **argv)
 		return (0);
 	if (!is_int(argv, argc))
 	{
-		ft_putstr_fd("Error: needs to be int\n", 1);
+		ft_putstr_fd("Error", 1);
 		return (0);
 	}
 	if (is_repeated(argv, argc))
 	{
-		ft_putstr_fd("Error: can't be repeated\n", 1);
+		ft_putstr_fd("Error", 1);
 		return (0);
 	}
 	if (is_sorted(argv, argc))
@@ -95,12 +95,11 @@ int	is_stack_sorted(t_stack *stack_a)
 {
 	int	i;
 
-	i = 0;
-	while (i < stack_a->length)
+	i = -1;
+	while (++i < stack_a->length - 1)
 	{
 		if (stack_a->index[i] > stack_a->index[i + 1])
 			return (0);
-		i++;
 	}
 	return (1);
 }

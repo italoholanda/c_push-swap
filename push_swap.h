@@ -6,7 +6,7 @@
 /*   By: igomes-h <italogholanda@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 22:03:56 by igomes-h          #+#    #+#             */
-/*   Updated: 2022/04/26 19:26:06 by igomes-h         ###   ########.fr       */
+/*   Updated: 2022/05/02 19:58:19 by igomes-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,6 @@ void	init_sort(t_stack *stack_a, t_stack *stack_b);
 void	sort_small_stack(t_stack *stack_a, t_stack *stack_b);
 void	five_sort(t_stack *stack_a, t_stack *stack_b);
 void	three_sort(t_stack *stack_a);
+void	radix_sort(t_stack *stack_a, t_stack *stack_b);
 
 #endif
