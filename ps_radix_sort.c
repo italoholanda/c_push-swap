@@ -6,7 +6,7 @@
 /*   By: igomes-h <italogholanda@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 19:06:53 by igomes-h          #+#    #+#             */
-/*   Updated: 2022/05/02 19:59:55 by igomes-h         ###   ########.fr       */
+/*   Updated: 2022/05/02 20:42:37 by igomes-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,8 @@ static int	most_significant_bit(int largest_number)
 }
 
 static void	push_zeros_to_stack_b(t_stack *stack_a,
-	t_stack *stack_b, int bits_to_shift)
+									t_stack *stack_b,
+									int bits_to_shift)
 {
 	int	i;
 	int	stop;

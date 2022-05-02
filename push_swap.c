@@ -6,7 +6,7 @@
 /*   By: igomes-h <italogholanda@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 23:22:48 by igomes-h          #+#    #+#             */
-/*   Updated: 2022/05/02 19:50:13 by igomes-h         ###   ########.fr       */
+/*   Updated: 2022/05/02 20:38:21 by igomes-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,5 @@ int	main(int argc, char **argv)
 	make_stacks(stack_a, stack_b, argc);
 	populate_stack(stack_a, argc, argv);
 	init_sort(stack_a, stack_b);
-
-
-	// ft_printf("----- ok -----\n");
 	free_stacks(stack_a, stack_b);
-	// ft_printf("--- freed ----\n");
 }

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ps_mov.c                                           :+:      :+:    :+:   */
+/*   ps_mov_part2.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: igomes-h <italogholanda@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 19:22:43 by igomes-h          #+#    #+#             */
-/*   Updated: 2022/04/25 20:03:15 by igomes-h         ###   ########.fr       */
+/*   Updated: 2022/05/02 20:42:14 by igomes-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 */
 void	ss(t_stack *stack_a, t_stack *stack_b)
 {
-	int		temp;
+	int	temp;
 
 	temp = stack_a->index[0];
 	stack_a->index[0] = stack_a->index[1];
@@ -34,8 +34,8 @@ void	ss(t_stack *stack_a, t_stack *stack_b)
 */
 void	rr(t_stack *stack_a, t_stack *stack_b)
 {
-	int		temp;
-	int		i;
+	int	temp;
+	int	i;
 
 	i = 0;
 	temp = stack_a->index[0];
@@ -62,8 +62,8 @@ void	rr(t_stack *stack_a, t_stack *stack_b)
 */
 void	rr_(t_stack *stack, char c)
 {
-	int		temp;
-	int		i;
+	int	temp;
+	int	i;
 
 	i = stack->length;
 	temp = stack->index[stack->length - 1];
@@ -82,8 +82,8 @@ void	rr_(t_stack *stack, char c)
 */
 void	rrr(t_stack *stack_a, t_stack *stack_b)
 {
-	int		temp;
-	int		i;
+	int	temp;
+	int	i;
 
 	i = 0;
 	temp = stack_a->index[stack_a->length];
