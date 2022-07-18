@@ -55,7 +55,7 @@ void	free_stacks(t_stack *stack_a, t_stack *stack_b)
 	free(stack_b);
 }
 
-void	extend_stack(t_stack *stack)
+void	shift_down_stack(t_stack *stack)
 {
 	int	i;
 
@@ -67,7 +67,7 @@ void	extend_stack(t_stack *stack)
 	}
 }
 
-void	reduce_stack(t_stack *stack)
+void	shift_up_stack(t_stack *stack)
 {
 	int	i;
 

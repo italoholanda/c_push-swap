@@ -1,23 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ps_small_sort.c                                    :+:      :+:    :+:   */
+/*   ps_five_sort.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/26 19:09:42 by igomes-h          #+#    #+#             */
-/*   Updated: 2022/07/14 00:17:34 by coder            ###   ########.fr       */
+/*   Created: 2022/07/18 23:22:52 by coder             #+#    #+#             */
+/*   Updated: 2022/07/18 23:24:35 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	sort_small_stack(t_stack *stack_a, t_stack *stack_b)
+void	push_smallest_to_top(int smallest_number, t_stack *stack_a)
 {
-	if (stack_a->length == 2)
-		s(stack_a, 'a');
-	if (stack_a->length == 3)
-		three_sort(stack_a);
-	if (stack_a->length >= 4)
-		five_sort(stack_a, stack_b);
+	while (stack_a->index[0] != smallest_number)
+		r(stack_a, 'a');
+}
+
+void	five_sort(t_stack *stack_a, t_stack *stack_b)
+{
+	push_smallest_to_top(1, stack_a);
+	p(stack_a, stack_b, 'b');
+	push_smallest_to_top(2, stack_a);
+	p(stack_a, stack_b, 'b');
+	three_sort(stack_a);
+	p(stack_b, stack_a, 'a');
+	p(stack_b, stack_a, 'a');
 }

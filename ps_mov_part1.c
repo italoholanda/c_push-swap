@@ -34,9 +34,9 @@ void	s(t_stack *stack, char key)
 */
 void	p(t_stack *stack_a, t_stack *stack_b, char key)
 {
-	extend_stack(stack_b);
+	shift_down_stack(stack_b);
 	stack_b->index[0] = stack_a->index[0];
-	reduce_stack(stack_a);
+	shift_up_stack(stack_a);
 	stack_b->length++;
 	stack_a->length--;
 	if (key == 'a')

@@ -16,7 +16,7 @@ PRINTF:= ./libft/ftprintf.a
 INCLUDE:= $(PRINTF) $(LIBFT)
 
 ## SOURCE ##
-SRC:= push_swap.c ps_stack.c ps_check.c ps_mov_part1.c ps_mov_part2.c ps_init_sort.c ps_small_sort.c ps_radix_sort.c
+SRC:= push_swap.c ps_stack.c ps_check.c ps_mov_part1.c ps_mov_part2.c ps_init_sort.c ps_small_sort.c ps_radix_sort.c ps_three_sort.c ps_five_sort.c
 
 ## NAME ##
 NAME:= push_swap

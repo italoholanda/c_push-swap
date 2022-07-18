@@ -27,8 +27,8 @@ typedef struct s_stack
 t_stack	*stack_malloc(void);
 int		make_stacks(t_stack *stack_a, t_stack *stack_b, int argc);
 void	free_stacks(t_stack *stack_a, t_stack *stack_b);
-void	reduce_stack(t_stack *stack);
-void	extend_stack(t_stack *stack);
+void	shift_up_stack(t_stack *stack);
+void	shift_down_stack(t_stack *stack);
 int		are_the_args_valid(int argc, char **argv);
 int		is_stack_sorted(t_stack *stack_a);
 void	s(t_stack *stack, char key);
